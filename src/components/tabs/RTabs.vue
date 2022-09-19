@@ -44,7 +44,7 @@ provide("TabsProvider", state);
 
 function update() {
   state.tabs = slots.default();
-  state.selectedIndex = state.selectedIndex || state.tabs?.[0].props.title;
+  state.selectedIndex = state.selectedIndex || state.tabs[0].props.title;
 }
 onBeforeMount(() => update());
 onBeforeUpdate(() => update());
